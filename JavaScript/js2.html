@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input_id"/>
+    <h1 id="h1_id">       </h1>
+    <button onclick="changeText()">Click</button>
+    <script>
+        function changeText(){
+            let val = document.getElementById("input_id").value;
+            if (val == ""){
+                document.getElementById("h1_id").innerHTML="Pls Enter Some Value";
+            }else{
+                document.getElementById("h1_id").innerHTML=val;
+            } 
+        }
+    </script>
+</body>
+</html>

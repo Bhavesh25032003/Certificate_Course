@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Border{
+            border: 3px solid red;
+        }
+        .noBorder{
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id = "input_1">
+    <button id="Check">Check</button>
+    <script>
+        var variable = document.getElementById("input_1").value;
+        chgRed=()=>{
+            if(variable == ''){
+                document.querySelector("#input_1").classList.add("Border");
+                document.querySelector("#input_1").classList.remove("noBorder");
+            }else{
+                document.querySelector("#input_1").classList.remove("Border");
+                document.querySelector("#input_1").classList.add("noBorder");
+            }
+        }
+        document.getElementById("Check").addEventListener("click",chgRed)
+    </script>
+</body>
+</html>
