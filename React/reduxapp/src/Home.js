@@ -1,10 +1,12 @@
 import { useDispatch, useSelector } from "react-redux"
 import Header from "./header";
+import { useState } from "react";
 
 export default function Home(){
 
     const counterVal = useSelector((state) => state.counter);
     const dispatch = useDispatch();
+    const [status,setStatus] = useState(true);
 
     const add=()=>{
         dispatch({
@@ -30,6 +32,7 @@ export default function Home(){
         <button onClick={ sub }>SUBTRACTION</button>
         <button onClick={ storeMyDetails }>STORE</button>
         <h1>from Redux {counterVal}</h1>
+        {(status)?<p className="red">This Is Paragraph</p>:null}
         </>
     )
 }

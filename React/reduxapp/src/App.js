@@ -7,16 +7,18 @@ import Contact from './Contact';
 import Header from './header';
 import { myStore } from './redux/config';
 import { Provider } from 'react-redux';
+import Web from './Web';
 
 let routerPaths = createBrowserRouter([
   {"path":"/home","element":<Home/>},
   {"path":"/about","element":<About/>},
   {"path":"/contact","element":<Contact/>},
+  {"path":"/web","element":<Web/>},
 ])
 function App() {
   return (
     <Provider store = {myStore}>
-      <div>
+      <div className='App'>
           <RouterProvider router = {routerPaths} />
       </div>
     </Provider>
