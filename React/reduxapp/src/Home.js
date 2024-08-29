@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
+import Header from "./header";
 
 export default function Home(){
 
@@ -15,11 +16,19 @@ export default function Home(){
             type:"sub"
         })
     }
+    const storeMyDetails=()=>{
+        dispatch({
+            "type":"saveDetails",
+            "data":{"name":"Bhavesh","email":"123@gmail.com"}
+        })
+    }
     return(
         <>
+        <Header/>
         <h1>HOME PAGE</h1>
         <button onClick={ add }>ADDITION</button>
         <button onClick={ sub }>SUBTRACTION</button>
+        <button onClick={ storeMyDetails }>STORE</button>
         <h1>from Redux {counterVal}</h1>
         </>
     )

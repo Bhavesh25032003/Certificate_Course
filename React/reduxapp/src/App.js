@@ -18,7 +18,6 @@ function App() {
     <Provider store = {myStore}>
       <div>
           <RouterProvider router = {routerPaths} />
-          <Header/>
       </div>
     </Provider>
   );
